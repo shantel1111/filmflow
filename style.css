@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+#root {
+  overflow: hidden;
+}
+
 html,
 body {
   height: 100%;
@@ -16,15 +20,10 @@ body {
   font-family: "Space Grotesk", sans-serif;
   color: #ffffff;
   background: #1a1534;
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* height: 100vh; */
 }
 
 header {
-  height: 5em;
+  height: 5.5em;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -36,8 +35,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
-  width: 100%;
+  /* width: 100%; */
+  /* height: auto; */
+  /* height: 100vh; */
 }
 
 .container {
@@ -59,7 +59,7 @@ main {
   /* column-gap: 1em; */
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 1em 0;
   max-width: 1000px;
 }
 
@@ -85,7 +85,7 @@ main {
 .menus-box {
   color: black;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   padding: 0.2em;
   margin: 0 auto;
@@ -141,10 +141,10 @@ input[type="search"] {
 }
 
 .film-container {
-  /* border: 1px solid red; */
   /* margin: 2em auto; */
+
   width: 100%;
-  padding: 20px;
+  padding: 1em 0;
   max-width: 1000px;
   /* height:  */
   /* overflow-y: auto; */
@@ -152,11 +152,19 @@ input[type="search"] {
   /* display: none; */
 }
 
+.swipe-container {
+  position: relative;
+  width: 300px; /* Card size */
+  height: 450px;
+  /* overflow: hidden; */
+}
+
 .film-box {
+  background: #1a1534;
   /* display: none; */
   /* width: 350px; */
-  width: 100%;
-  max-width: 650px;
+  /* width: 100%; */
+  max-width: 600px;
   min-width: 300px;
   height: 450px;
   margin: 0 auto;
@@ -171,9 +179,31 @@ input[type="search"] {
   cursor: pointer;
 }
 
+/* .stack-box {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+} */
+
 .border-style {
   border-radius: 25px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.293);
+
+}
+
+.tinder-card {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* overflow: hidden; */
 }
 
 .swipe-feature {
@@ -227,6 +257,7 @@ input[type="search"] {
 /* POTENTIAL CSS  */
 
 .film-search {
+  position: relative;
   /* border: 1px solid red; */
 
   display: flex;
@@ -238,6 +269,39 @@ input[type="search"] {
   padding: 0.8em;
   margin: 0.5em 0;
   /* width: auto; */
+}
+
+.plot-overlay {
+  position: absolute;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.film-desc {
+  /* border: 1px solid red; */
+  font-size: 12px;
+  color: #6b7280;
+  padding: 0.5em 1em;
+  text-align: justify;
+}
+
+.exit-btn {
+  cursor: pointer;
+}
+
+.exit {
+  padding-top: 0.8em;
+  padding-right: 1em;
+  /* border: 1px solid red; */
+  text-align: right;
 }
 
 .img-container {
@@ -321,10 +385,3 @@ input[type="search"] {
   margin-right: -5px;
   cursor: pointer;
 } */
-
-.film-desc {
-  font-size: 12px;
-  color: #6b7280;
-  margin: 0;
-  text-align: justify;
-}

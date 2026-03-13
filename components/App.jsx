@@ -10,6 +10,7 @@ export default function App() {
   const [showSearch, setShowSearch] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState("");
   const [movies, setMovies] = React.useState([]);
+  const [selectedMovie, setSelectedMovie] = React.useState(null);
 
   function handleChange(e) {
     setSearchValue(e.target.value);
@@ -63,6 +64,7 @@ export default function App() {
             <li
               onClick={() => {
                 setView("swipe");
+                setShowSearch(false);
               }}
             >
               <i className="fa-solid fa-film selected"></i>
@@ -106,7 +108,9 @@ export default function App() {
       </header>
       <main className="container">
         {(view === "swipe" && <Swipe />) ||
-          (view === "search" && <Search movies={movies} />) ||
+          (view === "search" && (
+            <Search movies={movies} selected={selectedMovie} />
+          )) ||
           (view === "watchlist" && <Watchlist />)}
       </main>
     </>
