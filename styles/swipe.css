@@ -1,0 +1,86 @@
+.film-container {
+  width: 100%;
+  padding: 1em 0;
+  max-width: 1000px;
+}
+
+.swipe-container {
+  position: relative;
+  width: 300px;
+  height: 450px;
+}
+
+.film-box {
+  background: rgba(26, 21, 52, 0.5);
+
+  max-width: 600px;
+  min-width: 300px;
+  height: 450px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.border-style {
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.293);
+}
+
+.tinder-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.swipe-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 1em 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 0.5em;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.heart {
+  color: rgb(117, 179, 24);
+}
+
+.undo {
+  color: rgb(255, 217, 0);
+}
+
+.cross {
+  color: rgb(255, 7, 7);
+}
+
+.btn-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
