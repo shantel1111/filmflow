@@ -1,0 +1,24 @@
+form label {
+  margin-top: 0.5em;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+button {
+  font-family: "Space Grotesk", sans-serif;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: none;
+  margin-top: 0.5em;
+  background-color: rgb(255, 255, 255);
+}
+
+.form-container {
+  max-width: 300px;
+}

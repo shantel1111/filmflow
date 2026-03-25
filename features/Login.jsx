@@ -1,21 +1,29 @@
-export default function Login() {
+import "../styles/login.css";
+
+export default function Login({ setLogin }) {
   return (
     <>
       <section className="form-container">
         <div>
           <h1>filmflow.</h1>
-          <h2>Login</h2>
-          <p>Don't have an account? Sign Up</p>
+
           <form>
             <label htmlFor="email">
-              Email:
+              email:
               <input id="email" type="email" name="email" required />
             </label>
             <label htmlFor="password">
-              Password:
+              pswrd:
               <input id="password" type="password" name="password" required />
             </label>
-            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              onClick={() => {
+                setLogin(true);
+              }}
+            >
+              submit
+            </button>
           </form>
         </div>
       </section>

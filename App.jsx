@@ -4,11 +4,11 @@ import Content from "./components/Content";
 import Login from "./features/Login";
 
 export default function App() {
-  const [isLoggedIn, setLogIn] = useState(false);
+  const [isLoggedIn, setLogin] = useState(false);
 
   return (
     <Layout>
-      {!isLoggedIn && <Login />}
+      {!isLoggedIn && <Login setLogin={setLogin} />}
       {isLoggedIn && <Content />}
     </Layout>
   );
