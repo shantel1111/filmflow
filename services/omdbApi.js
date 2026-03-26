@@ -4,9 +4,11 @@ export async function getMovies(searchQuery) {
   );
   const data = await response.json();
 
-  if (!data.search) return [];
+  if (!data.Search) return [];
 
-  const movieIds = data.search.map((film) => film.imdbID);
+  const movieIdsSet = new Set();
+  data.Search.forEach((film) => movieIdsSet.add(film.imdbID));
+  const movieIds = [...movieIdsSet];
 
   const fetches = movieIds.map(async function (id) {
     let movieUrl = `https://www.omdbapi.com/?apikey=54ab6a5b&i=${id}&type=movie&plot=short`;

@@ -1,35 +1,71 @@
-.app-container {
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  width: 100%;
-  padding: 1em 0;
-  max-width: 1000px;
-}
-
-.search-container {
+.film-search {
+  position: relative;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  padding: 0.8em;
+  margin: 0.5em 0;
+}
+
+.img-container {
+  align-self: flex-start;
+  width: 100px;
+}
+
+.film-img {
+  width: 100%;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.rating {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-input[type="search"] {
-  font-family: "Space Grotesk", sans-serif;
-  padding: 9px;
-  border: none;
-  outline: none;
+.star-icon {
+  color: #fec654;
 }
 
-.film-standby {
-  color: #dfdddd;
+.info-container {
+  /* border: 1px solid red; */
+  padding-left: 1.5em;
+  width: 100%;
+  height: 100%;
+}
+
+.top-section {
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
-.body-text {
-  font-weight: 700;
-  text-align: center;
+.middle-section {
+  height: auto;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.middle-section > .watchlist {
+  width: 80px;
+}
+
+.film-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.film-year {
+  text-decoration: underline;
+  font-size: 12px;
 }

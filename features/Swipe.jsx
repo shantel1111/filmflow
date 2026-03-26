@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import TinderCard from "react-tinder-card";
 import "../styles/swipe.css";
 
 export default function Search() {
-  const [movieArr, setMovieArr] = useState([]);
+  const [movieArr, setMovieArr] = React.useState([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const options = {
       method: "GET",
       headers: {

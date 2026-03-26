@@ -1,6 +1,15 @@
 import "../styles/search.css";
 
-export default function Header({ setView, view }) {
+export default function Header({
+  setView,
+  view,
+  setSearchValue,
+  searchValue,
+  runSearch,
+}) {
+  function handleChange(e) {
+    setSearchValue(e.target.value);
+  }
   return (
     <header>
       <div className="menus-box ">
@@ -30,6 +39,13 @@ export default function Header({ setView, view }) {
                 id="search-el"
                 type="search"
                 placeholder="Search for a movie"
+                value={searchValue}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    runSearch(searchValue);
+                  }
+                }}
               />
             )}
           </div>
