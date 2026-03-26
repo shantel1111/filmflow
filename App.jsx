@@ -4,7 +4,7 @@ import Content from "./components/Content";
 import Login from "./features/Login";
 
 export default function App() {
-  const [isLoggedIn, setLogin] = useState(false);
+  const [isLoggedIn, setLogin] = useState(true);
 
   return (
     <Layout>

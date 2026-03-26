@@ -1,6 +1,6 @@
+import "../styles/search.css";
 
-
-export default function Header({ setView }) {
+export default function Header({ setView, view }) {
   return (
     <header>
       <div className="menus-box ">
@@ -10,7 +10,9 @@ export default function Header({ setView }) {
               setView("swipe");
             }}
           >
-            <i className="fa-solid fa-film selected"></i>
+            <i
+              className={`fa-solid fa-film ${view === "swipe" ? "selected" : ""}`}
+            ></i>
           </li>
           <div className="search-container">
             <li
@@ -18,29 +20,27 @@ export default function Header({ setView }) {
                 setView("search");
               }}
             >
-              <i className="fa-solid fa-magnifying-glass "></i>
+              <i
+                className={`fa-solid fa-magnifying-glass ${view === "search" ? "selected" : ""}`}
+              ></i>
             </li>
-            {/* {showSearch && (
+
+            {view === "search" && (
               <input
                 id="search-el"
                 type="search"
                 placeholder="Search for a movie"
-                value={searchValue}
-                onChange={handleChange}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    fetchMovies();
-                  }
-                }}
               />
-            )} */}
+            )}
           </div>
           <li
             onClick={() => {
               setView("watchlist");
             }}
           >
-            <i className="fa-solid fa-heart-circle-check"></i>
+            <i
+              className={`fa-solid fa-heart-circle-check ${view === "watchlist" ? "selected" : ""}`}
+            ></i>
           </li>
         </ul>
       </div>

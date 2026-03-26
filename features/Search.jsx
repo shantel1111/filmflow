@@ -2,7 +2,7 @@ export default function Search() {
   return (
     <div className="app-container">
       <div class="film-standby">
-        <span class="body-text">let’s find a movie.</span>
+        <span class="body-text">Popcorn ready? Let’s find a movie.</span>
       </div>
     </div>
   );
