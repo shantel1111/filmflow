@@ -82,8 +82,8 @@ export default function Search() {
                 );
               })}
             <TinderCard className="film-box border-style">
-              <h1>filmflow</h1>
-              <p>swipe. save. watch.</p>
+              <h1>filmflow.</h1>
+              <p>swipe - save - watch.</p>
               <div className="swipe-feature">
                 <div>
                   <i className="fa-solid fa-left-long"></i>
@@ -114,4 +114,3 @@ export default function Search() {
     </>
   );
 }
-

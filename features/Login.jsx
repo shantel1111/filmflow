@@ -7,20 +7,23 @@ export default function Login({ setLogin }) {
     <>
       <section className="form-container">
         <div>
-          <h1>filmflow.</h1>
-          <h2>{isSignUp ? "SIGN UP" : "LOGIN"}</h2>
           <form>
+            <h1>filmflow.</h1>
+            <h2>{isSignUp ? "Join today!" : "Happy to have you back!"}</h2>
+            <p className="hook-text">
+              Picking movies has never been more easier than now. Free forever.
+            </p>
             <label htmlFor="email">
-              email:
+              Your Email:
               <input id="email" type="email" name="email" required />
             </label>
             <label htmlFor="password">
-              pswrd:
+              Password:
               <input id="password" type="password" name="password" required />
             </label>
             {isSignUp && (
               <label htmlFor="confirm-password">
-                confirm pswrd:
+                Confirm password:
                 <input
                   id="confirm-password"
                   type="password"
@@ -30,24 +33,26 @@ export default function Login({ setLogin }) {
               </label>
             )}
             <button
+              className="submit-btn"
               type="submit"
               onClick={() => {
                 setLogin(true);
               }}
             >
-              submit
+              {isSignUp ? "Sign up" : "Sign in"}
             </button>
+            <p className="membership-text">
+              {isSignUp ? "Already have an account? " : "Not a member yet? "}
+              <button
+                className="account-btn"
+                onClick={() => {
+                  setSignUp((prevVal) => !prevVal);
+                }}
+              >
+                {isSignUp ? "Login" : "Sign Up"}
+              </button>
+            </p>
           </form>
-          <p>
-            Not a member yet?{" "}
-            <button
-              onClick={() => {
-                setSignUp((prevVal) => !prevVal);
-              }}
-            >
-              {isSignUp ? "LOGIN" : "SIGN UP"}
-            </button>
-          </p>
         </div>
       </section>
     </>
