@@ -17,7 +17,9 @@ export async function getMovies(searchQuery) {
   });
   const allMovieData = await Promise.all(fetches);
 
-  return filterMovies(allMovieData);
+  const filterd = filterMovies(allMovieData);
+
+  return sortByYear(filterd);
 }
 
 function filterMovies(data) {
@@ -32,5 +34,11 @@ function filterMovies(data) {
     });
 
     return hasPoster && hasPlot && isAllowedGenre;
+  });
+}
+
+function sortByYear(movies) {
+  return movies.sort((a, b) => {
+    return parseInt(b.Year) - parseInt(a.Year);
   });
 }
