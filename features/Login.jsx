@@ -35,7 +35,8 @@ export default function Login({ setLogin }) {
             <button
               className="submit-btn"
               type="submit"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setLogin(true);
               }}
             >

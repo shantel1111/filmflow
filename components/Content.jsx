@@ -4,7 +4,7 @@ import Swipe from "../features/Swipe";
 import Search from "../features/Search";
 import Watchlist from "../features/Watchlist";
 
-import { getMovies } from "../services/omdbApi";
+import { getMovies } from "../services/searchApi";
 
 export default function Content() {
   const [view, setView] = React.useState("swipe");

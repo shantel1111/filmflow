@@ -33,10 +33,9 @@
 }
 
 .info-container {
-  /* border: 1px solid red; */
-  padding-left: 1.5em;
   width: 100%;
   height: 100%;
+  padding: 0 1em;
 }
 
 .top-section {
@@ -49,10 +48,11 @@
 .middle-section {
   height: auto;
   font-size: 12px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0.5em;
 }
 
 .middle-section > .watchlist {
@@ -62,10 +62,15 @@
 .film-name {
   font-size: 18px;
   font-weight: 500;
-  margin-right: 10px;
 }
 
 .film-year {
   text-decoration: underline;
   font-size: 12px;
+}
+
+.film-desc {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: justify;
 }

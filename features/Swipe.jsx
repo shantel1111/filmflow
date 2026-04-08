@@ -1,7 +1,7 @@
 import React from "react";
 import TinderCard from "react-tinder-card";
 import "../styles/swipe.css";
-import { findMovie } from "../services/tmbdApi";
+import { findMovie } from "../services/swipeApi";
 
 export default function Search() {
   const [movieArr, setMovieArr] = React.useState([]);
@@ -50,10 +50,6 @@ export default function Search() {
     }
   };
 
-  // const onCardLeftScreen = (id) => {
-  //   console.log(`${id} left the screen`);
-  // };
-
   function addtoWatchList(id) {
     findMovie(id);
   }
@@ -73,9 +69,6 @@ export default function Search() {
                     onSwipe={(dir) => {
                       onSwipe(dir, movie.id);
                     }}
-                    // onCardLeftScreen={() => {
-                    //   onCardLeftScreen(movie.id);
-                    // }}
                     preventSwipe={["up", "down"]}
                     className="tinder-card"
                   >

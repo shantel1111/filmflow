@@ -58,6 +58,9 @@ export default function Header({
               className={`fa-solid fa-heart-circle-check ${view === "watchlist" ? "selected" : ""}`}
             ></i>
           </li>
+          <li>
+            <i className="fa-solid fa-user"></i>
+          </li>
         </ul>
       </div>
     </header>
