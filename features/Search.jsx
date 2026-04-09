@@ -15,7 +15,7 @@ export default function Search({ movies }) {
         </div>
       ) : (
         movies.map((movie) => (
-          <div className="film-search">
+          <div className="film-search" key={movie.imdb_id}>
             <div className="img-container">
               <img
                 className="film-img"

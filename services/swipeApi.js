@@ -13,10 +13,11 @@ export async function findMovie(id) {
     .catch((err) => console.error(err));
 }
 
-// Poster  res.poster_path
-// imbdRating res.imbd_id
-// Year res.release_date (have to make into year)
-// Title res.original_title
-// Description res.overview
-// Runtime res.runtime
-// Genre res.genres (an array that needs to be mapped)
+// .poster_path
+// .vote_average
+// .release_date
+// .title
+// .original_language
+// .runtime
+// .genres
+// .overview
